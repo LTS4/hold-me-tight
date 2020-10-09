@@ -67,7 +67,7 @@ Architecture | Dataset | Training method
 If you use this code, or some of the attached models, please cite the following [paper](https://arxiv.org/abs/2002.06349):
 
 ```
-@InCollection{OrtizModasNADs2020,
+@InCollection{OrtizModasHMT2020,
   TITLE = {{Hold me tight! Influence of discriminative features on deep network boundaries}},
   AUTHOR = {{Ortiz-Jimenez}, Guillermo and {Modas}, Apostolos and {Moosavi-Dezfooli}, Seyed-Mohsen and Frossard, Pascal},
   BOOKTITLE = {Advances in Neural Information Processing Systems 34},
