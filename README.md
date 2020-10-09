@@ -11,6 +11,11 @@ $ conda env create -f environment.yml
 $ conda activate hold_me_tight
 ```
 
+Note: this repository comes with some pretrained [models](Models/Pretrained/), which have been uploaded as Git LFS. In case you do not want to clone the pretrained models, i.e., due to disk space limitations, please clone the repository using the following command:
+```
+$ GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:LTS4/hold-me-tight.git
+```
+
 ## Experiments
 This repository contains code to reproduce the following experiments: 
 
