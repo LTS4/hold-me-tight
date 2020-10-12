@@ -11,11 +11,6 @@ $ conda env create -f environment.yml
 $ conda activate hold_me_tight
 ```
 
-**NOTE**: this repository comes with some pretrained [models](Models/Pretrained/), which have been uploaded as Git LFS. In case you do not want to clone the pretrained models, i.e., due to disk space limitations, please clone the repository using the following command:
-```
-$ GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:LTS4/hold-me-tight.git
-```
-
 ## Experiments
 This repository contains code to reproduce the following experiments: 
 
@@ -33,35 +28,35 @@ You can reproduce this experiments separately using their individual scripts, or
 
 ## Pretrained architectures
 
-The repository also contains a set of pretrained models that we used in our experiments. The exact hyperparameters and settings can be found in the Supplementary material of the [paper](https://arxiv.org/abs/2002.06349).
+We also provide a set of pretrained models that we used in our experiments. The exact hyperparameters and settings can be found in the Supplementary material of the [paper](https://arxiv.org/abs/2002.06349). All the models are publicly available and can be downloaded from [here](https://drive.google.com/drive/folders/1Y4SWnfdojzODX2SQyf8V5kC6sE1pmF4m?usp=sharing). In order to execute the scripts using the pretrained models, it is recommended to download them and save them under the ```Models/Pretrained/``` directory. 
 
 Architecture | Dataset | Training method
 ---|---|---
-[LeNet](Models/Pretrained/MNIST/LeNet/) | MNIST | Standard
-[ResNet18](Models/Pretrained/MNIST/ResNet18/) | MNIST | Standard
-[ResNet18](Models/Pretrained/CIFAR10/ResNet18/) | CIFAR10 | Standard
-[VGG19](Models/Pretrained/CIFAR10/VGG19/) | CIFAR10 | Standard
-[DenseNet121](Models/Pretrained/CIFAR10/DenseNet121/) | CIFAR10 | Standard
-[LeNet](Models/Pretrained/MNIST_flipped/LeNet/) | Flipped MNIST | Standard + Frequency flip
-[ResNet18](Models/Pretrained/MNIST_flipped/ResNet18/) | Flipped MNIST | Standard + Frequency flip
-[ResNet18](Models/Pretrained/CIFAR10_flipped/ResNet18/) | Flipped CIFAR10 | Standard + Frequency flip
-[VGG19](Models/Pretrained/CIFAR10_flipped/VGG19/) | Flipped CIFAR10 | Standard + Frequency flip
-[DenseNet121](Models/Pretrained/CIFAR10_flipped/DenseNet121/) | Flipped CIFAR10 | Standard + Frequency flip
-[ResNet50](Models/Pretrained/ImageNet_flipped/ResNet50/) | Flipped ImageNet | Standard + Frequency flip
-[ResNet18](Models/Pretrained/CIFAR10_low_pass/ResNet18/) | Low-pass CIFAR10 | Standard + Low-pass filtering
-[VGG19](Models/Pretrained/CIFAR10_low_pass/VGG19/) | Low-pass CIFAR10 | Standard + Low-pass filtering
-[DenseNet121](Models/Pretrained/CIFAR10_low_pass/DenseNet121/) | Low-pass CIFAR10 | Standard + Low-pass filtering
-[Robust LeNet](Models/Pretrained/MNIST_robust/LeNet/) | MNIST | L2 PGD adversarial training (eps = 2)
-[Robust ResNet18](Models/Pretrained/MNIST_robust/ResNet18/) | MNIST | L2 PGD adversarial training (eps = 2)
-[Robust ResNet18](Models/Pretrained/CIFAR10_robust/ResNet18/) | CIFAR10 | L2 PGD adversarial training (eps = 1)
-[Robust VGG19](Models/Pretrained/CIFAR10_robust/VGG19/) | CIFAR10 | L2 PGD adversarial training (eps = 1)
-[Robust DenseNet121](Models/Pretrained/CIFAR10_robust/DenseNet121/) | CIFAR10 | L2 PGD adversarial training (eps = 1)
-[Robust ResNet50](Models/Pretrained/ImageNet_robust/ResNet50/) | ImageNet | L2 PGD adversarial training (eps = 3) (copied from [here](https://github.com/MadryLab/robustness))
-[Robust LeNet](Models/Pretrained/MNIST_flipped_robust/LeNet/) | Flipped MNIST | L2 PGD adversarial training (eps = 2) with Dykstra projection + Frequency flip
-[Robust ResNet18](Models/Pretrained/MNIST_flipped_robust/ResNet18/) | Flipped MNIST | L2 PGD adversarial training (eps = 2) with Dykstra projection + Frequency flip
-[Robust ResNet18](Models/Pretrained/CIFAR10_flipped_robust/ResNet18/) | Flipped CIFAR10 | L2 PGD adversarial training (eps = 1) with Dykstra projection + Frequency flip
-[Robust VGG19](Models/Pretrained/CIFAR10_flipped_robust/VGG19/) | Flipped CIFAR10 | L2 PGD adversarial training (eps = 1) with Dykstra projection + Frequency flip
-[Robust DenseNet121](Models/Pretrained/CIFAR10_flipped_robust/DenseNet121/) | Flipped CIFAR10 | L2 PGD adversarial training (eps = 1) with Dykstra projection + Frequency flip
+LeNet | MNIST | Standard
+ResNet18 | MNIST | Standard
+ResNet18 | CIFAR10 | Standard
+VGG19 | CIFAR10 | Standard
+DenseNet121 | CIFAR10 | Standard
+LeNet | Flipped MNIST | Standard + Frequency flip
+ResNet18 | Flipped MNIST | Standard + Frequency flip
+ResNet18 | Flipped CIFAR10 | Standard + Frequency flip
+VGG19 | Flipped CIFAR10 | Standard + Frequency flip
+DenseNet121 | Flipped CIFAR10 | Standard + Frequency flip
+ResNet50 | Flipped ImageNet | Standard + Frequency flip
+ResNet18 | Low-pass CIFAR10 | Standard + Low-pass filtering
+VGG19 | Low-pass CIFAR10 | Standard + Low-pass filtering
+DenseNet121 | Low-pass CIFAR10 | Standard + Low-pass filtering
+Robust LeNet | MNIST | L2 PGD adversarial training (eps = 2)
+Robust ResNet18 | MNIST | L2 PGD adversarial training (eps = 2)
+Robust ResNet18 | CIFAR10 | L2 PGD adversarial training (eps = 1)
+Robust VGG19 | CIFAR10 | L2 PGD adversarial training (eps = 1)
+Robust DenseNet121 | CIFAR10 | L2 PGD adversarial training (eps = 1)
+Robust ResNet50 | ImageNet | L2 PGD adversarial training (eps = 3) (copied from [here](https://github.com/MadryLab/robustness))
+Robust LeNet | Flipped MNIST | L2 PGD adversarial training (eps = 2) with Dykstra projection + Frequency flip
+Robust ResNet18 | Flipped MNIST | L2 PGD adversarial training (eps = 2) with Dykstra projection + Frequency flip
+Robust ResNet18 | Flipped CIFAR10 | L2 PGD adversarial training (eps = 1) with Dykstra projection + Frequency flip
+Robust VGG19 | Flipped CIFAR10 | L2 PGD adversarial training (eps = 1) with Dykstra projection + Frequency flip
+Robust DenseNet121 | Flipped CIFAR10 | L2 PGD adversarial training (eps = 1) with Dykstra projection + Frequency flip
 
 ## Reference
 If you use this code, or some of the attached models, please cite the following [paper](https://arxiv.org/abs/2002.06349):
