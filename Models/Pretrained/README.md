@@ -1,6 +1,6 @@
 ## Pretrained architectures
 
-This directory provides a set of pretrained models that we used in our experiments. The exact hyperparameters and settings can be found in the Supplementary material of the [paper](https://arxiv.org/abs/2002.06349). All the models are publicly available and can be downloaded from [here](https://drive.google.com/drive/folders/1Y4SWnfdojzODX2SQyf8V5kC6sE1pmF4m?usp=sharing). In order to execute the scripts using the pretrained models, it is recommended to download and save them undert this directory. 
+This directory provides a set of pretrained models that we used in our experiments. The exact hyperparameters and settings can be found in the Supplementary material of the [paper](https://arxiv.org/abs/2002.06349). All the models are publicly available and can be downloaded from [here](https://drive.google.com/drive/folders/1Y4SWnfdojzODX2SQyf8V5kC6sE1pmF4m?usp=sharing), and it is recommended to download and save them under this directory.
 
 Architecture | Dataset | Training method
 ---|---|---
