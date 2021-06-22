@@ -167,7 +167,8 @@ def compute_margin_distribution(model, trans, dataloader, subspace_list, path, p
             for n, im in enumerate(inputs):
                 adv_perts[n], _, _, _, _ = subspace_deepfool(im, model, trans, Sp=Sp)
 
-        sp_margin.append(adv_perts.cpu().view([-1, np.prod(inputs.shape[1:])]).norm(dim=[1]))
+            sp_margin.append(adv_perts.cpu().view([-1, np.prod(inputs.shape[1:])]).norm(dim=[1]))
+        
         sp_margin = torch.cat(sp_margin)
         margins.append(sp_margin.numpy())
         print('Subspace %d:\tMedian margin: %5.5f' % (s, np.median(sp_margin)))
